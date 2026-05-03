@@ -6,7 +6,7 @@ export default function Header({ active, onNav }) {
       sub: [
         { id: 'about-summary', label: 'Summary' },
         { id: 'about-education', label: 'Education' },
-        { id: 'about-experience', label: 'Experience' },
+        { id: 'about-experience', label: 'Experiences' },
       ],
     },
     { id: 'projects', label: 'Projects' },
