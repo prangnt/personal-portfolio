@@ -920,6 +920,8 @@ html { scroll-behavior: smooth; }
 section[id] { scroll-margin-top: 110px; }
 
 /* Responsive niceties (still desktop-first) */
+html { overflow-x: hidden; }
+
 @media (max-width: 960px) {
   .nk-hero-grid { grid-template-columns: 1fr; gap: 32px; }
   .nk-display, .nk-display-pm { font-size: 52px; }
@@ -935,6 +937,59 @@ section[id] { scroll-margin-top: 110px; }
   .nk-header { padding: 12px 16px 0; }
   .nk-footer { padding: 32px 24px; }
   .nk-footer-inner { flex-direction: column; gap: 12px; text-align: center; }
+
+  /* Header: let the nav scroll horizontally instead of overflowing */
+  .nk-header-inner { padding: 8px 12px 8px 18px; gap: 12px; }
+  .nk-nav { overflow-x: auto; scrollbar-width: none; flex-wrap: nowrap; }
+  .nk-nav::-webkit-scrollbar { display: none; }
+  .nk-nav-link { padding: 8px 12px; white-space: nowrap; }
+  /* Hover dropdowns don't work on touch — hide them */
+  .nk-nav-link.has-caret::after { display: none; }
+  .nk-dropdown { display: none !important; }
+}
+
+@media (max-width: 640px) {
+  /* Phone-width tightening */
+  .nk-section { padding: 48px 18px 0; }
+  .nk-hero { padding: 24px 18px 0; }
+  .nk-footer { padding: 24px 18px; }
+  .nk-header { padding: 8px 10px 0; }
+
+  .nk-display, .nk-display-pm { font-size: 40px; line-height: 1.1; }
+  .nk-h2 { font-size: 28px; line-height: 1.2; }
+  .nk-lead { font-size: 16px; }
+
+  /* Header brand smaller on tiny screens */
+  .nk-brand { font-size: 22px; padding-right: 8px; }
+
+  /* Hero blob shouldn't push layout wider */
+  .nk-hero-blob { width: 240px; height: 240px; top: -20px; right: -60px; opacity: 0.5; }
+
+  /* About tabs: scroll instead of wrap */
+  .nk-tabs { overflow-x: auto; flex-wrap: nowrap; max-width: 100%; scrollbar-width: none; }
+  .nk-tabs::-webkit-scrollbar { display: none; }
+  .nk-tab { padding: 8px 14px; font-size: 13px; white-space: nowrap; }
+
+  /* About stats: 48px too big on phones */
+  .nk-stat-row { gap: 20px; flex-wrap: wrap; }
+  .nk-stat strong { font-size: 32px; }
+
+  /* Projects */
+  .nk-project-thumb { padding: 20px; }
+  .nk-project-title-large { font-size: 22px; }
+  .nk-project-body { padding: 18px 20px 20px; }
+
+  /* OpenToWork banner */
+  .nk-open-banner { padding: 22px 18px; border-radius: 18px; }
+  .nk-open-glow { width: 200px; height: 200px; top: -60px; right: -60px; }
+  .nk-open-cta { flex-wrap: wrap; }
+
+  /* Contact LINE primary card: stack QR above actions */
+  .nk-line-row { flex-direction: column; align-items: stretch; gap: 16px; }
+  .nk-line-qr { align-self: flex-start; }
+
+  /* Channel block heading */
+  .nk-channel-block-text h3 { font-size: 22px; }
 }
 
 
