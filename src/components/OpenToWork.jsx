@@ -30,7 +30,7 @@ export default function OpenToWork() {
         </svg>
       ),
       title: 'Freelance Project Manager',
-      blurb: 'End-to-end delivery for data, AI, and digital transformation projects — agile, on-time, no drama.',
+      blurb: 'End-to-end delivery for data, AI, and digital transformation projects — agile and reliable.',
       tag: '5+ years',
       tagClass: 'nk-pill-saffron',
     },
@@ -44,7 +44,7 @@ export default function OpenToWork() {
         </svg>
       ),
       title: 'Event Organizer & Facilitator',
-      blurb: 'Workshops, design-thinking sessions, and rural development camps — facilitation that lands.',
+      blurb: 'AI workshops, design-thinking sessions, and boardgame events — facilitation that lands.',
       tag: 'Workshop',
       tagClass: 'nk-pill-sage',
     },

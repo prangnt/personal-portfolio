@@ -5,7 +5,7 @@ export default function About() {
   const tabs = [
     { id: 'summary', label: 'Summary' },
     { id: 'education', label: 'Education' },
-    { id: 'experience', label: 'Experience' },
+    { id: 'experience', label: 'Experiences' },
   ];
 
   // Allow deep-link from header dropdown
@@ -49,13 +49,14 @@ function Summary() {
   return (
     <div className="nk-about-summary">
       <p>
-        I'm a results-driven project manager with <strong>5+ years</strong> of experience bridging
-        business requirements and technical delivery for data and AI projects.
+        Results-driven project manager with <strong>5+ years</strong> of experience bridging business
+        requirements and technical delivery for data/AI projects. Proven expertise in managing
+        cross-functional teams, coordinating internal and external stakeholders, and delivering
+        complex technical solutions.
       </p>
       <p>
-        I lead cross-functional teams of 8–12 specialists — developers, data scientists, BI analysts —
-        through agile delivery. I'm comfortable with enterprise stakeholders, aggressive timelines,
-        and the messy middle where business goals meet technical reality.
+        Skilled in agile methodologies, resource management, risk mitigation that drive measurable
+        project outcomes and team performance excellence.
       </p>
 
       <div className="nk-stat-row">
@@ -115,6 +116,9 @@ function Summary() {
             <div className="nk-skill-tags">
               <span className="nk-skill-tag">Asana</span>
               <span className="nk-skill-tag">SQL</span>
+              <span className="nk-skill-tag">Canva</span>
+              <span className="nk-skill-tag">CapCut</span>
+              <span className="nk-skill-tag">Notion</span>
               <span className="nk-skill-tag">Looker Studio</span>
               <span className="nk-skill-tag">Google Data Studio</span>
               <span className="nk-skill-tag">Excel</span>

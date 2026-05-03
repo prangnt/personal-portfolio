@@ -9,13 +9,13 @@ export default function Hero({ onNav }) {
           <span className="nk-eyebrow">Hello there ✿</span>
           <h1 className="nk-display nk-display-pm">
             Hi, I'm <em>Natcha</em>.<br/>
-            A senior project manager.
+            A project manager.
           </h1>
           <p className="nk-lead">
-            I bridge business goals and technical delivery for data &amp; AI projects.
-            Five-plus years leading cross-functional teams across financial services,
-            retail, and oil &amp; gas — and I write about the craft of getting things
-            shipped on my channel.
+            I bridge business goals with technical execution for data and AI initiatives,
+            bringing over five years of experience leading cross-functional teams across
+            financial services, retail, and oil &amp; gas. Alongside my core work, I create
+            content and facilitate workshops to share practical insights and drive learning.
           </p>
           <div className="nk-hero-actions">
             <button className="nk-btn nk-btn-primary" onClick={() => onNav('projects')}>See my work</button>
@@ -28,7 +28,7 @@ export default function Hero({ onNav }) {
             </span>
             <span className="nk-hero-meta-item">
               <span className="nk-hero-meta-dot" style={{background: 'var(--c-coral)'}}></span>
-              Open to PM roles
+              Open to work
             </span>
             <span className="nk-hero-meta-item">
               <span className="nk-hero-meta-dot" style={{background: 'var(--c-saffron-deep)'}}></span>

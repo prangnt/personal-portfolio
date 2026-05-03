@@ -5,7 +5,7 @@ export default function Channel() {
     {
       id: 'personal',
       eyebrow: 'Personal · @pprangnt',
-      title: 'Slow notes from Bangkok',
+      title: 'Lifestyle',
       blurb: 'Outfits, cafés, books, and the occasional travel reel — the soft side of the work.',
       accent: 'linear-gradient(135deg,#F6BD60,#F28482)',
       links: [
@@ -30,11 +30,24 @@ export default function Channel() {
     {
       id: 'working',
       eyebrow: 'ช่องพิเศษ · @pprangntworking',
-      title: 'ช่องพิเศษ — work side stories',
-      blurb: 'A side channel for the working life — projects, tools, and lessons from running data & AI delivery.',
+      title: 'Prang\'s Journey (ปรางค์ไปทำอะไรมาบ้าง?)',
+      blurb: 'A side channel for my exploration and new experiences.',
       accent: 'linear-gradient(135deg,#F28482,#F5CAC3)',
       links: [
         { kind: 'TikTok', icon: 'TikTok', handle: '@pprangntworking', href: 'https://www.tiktok.com/@pprangntworking?_r=1&_t=ZS-95sMDXWWVMY' },
+      ],
+    },
+    {
+      id: 'pmbuddy',
+      eyebrow: 'PM knowledge · PMBuddy',
+      title: 'PMBuddy',
+      blurb: 'Bite-sized project management tips, frameworks, and real-world lessons — across all major platforms.',
+      accent: 'linear-gradient(135deg,#F6BD60,#84A59D)',
+      links: [
+        { kind: 'TikTok',    icon: 'TikTok',    handle: '@pmbuddy',  href: 'https://vt.tiktok.com/ZSM4ySKfV/' },
+        { kind: 'Instagram', icon: 'Instagram', handle: '@pmbuddy',  href: 'https://www.instagram.com/reel/DG7bD6JSgA1/?igsh=eHZoazR0MDNxa3pw' },
+        { kind: 'YouTube',   icon: 'YouTube',   handle: '@pmbuddy',  href: 'https://youtube.com/shorts/e5Kqx6f1RYE?feature=share' },
+        { kind: 'Facebook',  icon: 'Facebook',  handle: 'PMBuddy',   href: 'https://www.facebook.com/share/r/1Xu3SeQjki/' },
       ],
     },
   ];
@@ -43,7 +56,7 @@ export default function Channel() {
     <section className="nk-section" id="channel">
       <div className="nk-section-head">
         <span className="nk-eyebrow">My channels · blog</span>
-        <h2 className="nk-h2">Three corners of the internet I keep.</h2>
+        <h2 className="nk-h2">My channels represent my interests.</h2>
         <p className="nk-section-sub">A personal channel for the everyday, a financial-advisor channel for what I learn about money, and a side channel for working notes.</p>
       </div>
 

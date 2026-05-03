@@ -1,23 +1,12 @@
 import SocialIcons from './SocialIcons.jsx';
 
 export default function Contact() {
-  const socials = [
-    { id: 'fb', label: 'Facebook', handle: '/pprangnt', icon: 'Facebook', bg: '#1877F2', href: 'https://www.facebook.com/pprangnt' },
-    { id: 'ig', label: 'Instagram', handle: '@pprangnt', icon: 'Instagram', bg: 'linear-gradient(135deg,#F58529,#DD2A7B,#8134AF)', href: 'https://www.instagram.com/pprangnt' },
-    { id: 'tt', label: 'TikTok', handle: '@pprangnt', icon: 'TikTok', bg: '#22201E', href: 'https://www.tiktok.com/@pprangnt' },
-    { id: 'l8', label: 'Lemon8', handle: '@pprangnt', icon: 'Lemon8', bg: '#FFD93B', href: 'https://s.lemon8-app.com/s/GgsRZcmbfc' },
-    { id: 'li', label: 'LinkedIn', handle: 'in/natchatr', icon: 'LinkedIn', bg: '#0A66C2', href: 'https://www.linkedin.com/in/natchatr' },
-    { id: 'yt', label: 'YouTube', handle: '@pprangnt', icon: 'YouTube', bg: '#FF0000', href: '#' },
-    { id: 'box', label: 'Product showcase', handle: 'pprangnt.passio.eco', icon: 'Box', bg: '#84A59D', href: 'https://pprangnt.passio.eco/' },
-    { id: 'web', label: 'natcha.me', handle: 'this site', icon: 'Email', bg: '#F28482', href: '#' },
-  ];
-
   return (
     <section className="nk-section" id="contact">
       <div className="nk-section-head">
         <span className="nk-eyebrow">Contact me</span>
         <h2 className="nk-h2">Let's chat.</h2>
-        <p className="nk-section-sub">LINE is fastest. Email is best for longer notes. Everything else is for the slow conversations.</p>
+        <p className="nk-section-sub">For timely communication, LINE is preferred. Email is best suited for more detailed correspondence.</p>
       </div>
 
       <div className="nk-contact-hero">
@@ -65,37 +54,9 @@ export default function Contact() {
             </div>
             <span style={{color:'var(--fg-subtle)'}}>↗</span>
           </a>
-          <a className="nk-contact-card" href="https://www.instagram.com/pprangnt" target="_blank" rel="noreferrer">
-            <div className="ico" style={{background:'linear-gradient(135deg,#F58529,#DD2A7B,#8134AF)', color:'#fff'}}>
-              <SocialIcons.Instagram width="22" height="22" />
-            </div>
-            <div className="text">
-              <span className="label">Instagram</span>
-              <span className="handle">@pprangnt</span>
-            </div>
-            <span style={{color:'var(--fg-subtle)'}}>↗</span>
-          </a>
         </div>
       </div>
 
-      <h4 className="nk-contact-section-title" id="contact-social">Find me elsewhere</h4>
-      <div className="nk-socials-grid">
-        {socials.map((s) => {
-          const Icon = SocialIcons[s.icon];
-          return (
-            <a className="nk-social-tile" key={s.id} href={s.href} target="_blank" rel="noreferrer">
-              <div className="ico" style={{background: s.bg}}>
-                <Icon width="22" height="22" />
-              </div>
-              <div>
-                <div className="name">{s.label}</div>
-                <div className="handle">{s.handle}</div>
-              </div>
-              <span className="arrow">↗</span>
-            </a>
-          );
-        })}
-      </div>
     </section>
   );
 }
