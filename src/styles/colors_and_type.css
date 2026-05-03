@@ -1,0 +1,269 @@
+/* =====================================================================
+   Natcha Design System — Colors & Type
+   Foundational tokens (palette, scales) + semantic tokens (h1, body, etc).
+   ===================================================================== */
+
+/* ---------- Webfonts (Google Fonts) ----------
+   FLAGGED SUBSTITUTIONS — no font files were provided by the user.
+   Closest Google Fonts matches:
+     • Display serif → Fraunces (warm humanist editorial serif)
+     • Body sans    → DM Sans  (friendly geometric sans)
+     • Mono         → JetBrains Mono
+   Replace with custom fonts if/when provided.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Noto+Sans:wght@400;500;600;700&family=Noto+Sans+Mono:wght@400;500&display=swap');
+
+:root {
+  /* =========================================================
+     PALETTE — raw color tokens (from coolors.co/f6bd60-...)
+     ========================================================= */
+  --c-saffron:       #F6BD60;  /* warm sunny yellow */
+  --c-eggshell:      #F7EDE2;  /* cream background */
+  --c-pink:          #F5CAC3;  /* soft pink (Pale Dogwood) */
+  --c-sage:          #84A59D;  /* muted teal-green (Morning Blue) */
+  --c-coral:         #F28482;  /* warm coral (Light Coral) */
+
+  /* Tints / shades — derived neighbors of the core palette */
+  --c-saffron-soft:  #FBE3B6;
+  --c-saffron-deep:  #D89A3F;
+  --c-pink-soft:     #FCE4DF;
+  --c-pink-deep:     #E5A89F;
+  --c-sage-soft:     #B6CBC5;
+  --c-sage-deep:     #5F8079;
+  --c-coral-soft:    #F8B5B3;
+  --c-coral-deep:    #D4615F;
+
+  /* Neutrals — warm-toned, never pure black/white */
+  --c-ink:           #22201E;  /* primary text */
+  --c-ink-2:         #4A4642;  /* secondary text */
+  --c-ink-3:         #7A736C;  /* tertiary / meta */
+  --c-line:          rgba(34, 32, 30, 0.10);
+  --c-line-strong:   rgba(34, 32, 30, 0.18);
+  --c-paper:         #FBF5EC;  /* slightly lighter than eggshell */
+  --c-paper-2:       #F7EDE2;  /* same as eggshell */
+  --c-white:         #FFFFFF;
+
+  /* =========================================================
+     SEMANTIC COLORS
+     ========================================================= */
+  --bg:              var(--c-eggshell);
+  --bg-elevated:     var(--c-paper);
+  --bg-soft:         var(--c-pink-soft);
+
+  --fg:              var(--c-ink);
+  --fg-muted:        var(--c-ink-2);
+  --fg-subtle:       var(--c-ink-3);
+  --fg-on-coral:     #FFFFFF;
+  --fg-on-sage:      #FFFFFF;
+  --fg-on-saffron:   var(--c-ink);
+
+  --border:          var(--c-line);
+  --border-strong:   var(--c-line-strong);
+
+  --accent:          var(--c-coral);
+  --accent-hover:    var(--c-coral-deep);
+  --accent-soft:     var(--c-coral-soft);
+
+  --secondary:       var(--c-sage);
+  --secondary-hover: var(--c-sage-deep);
+  --secondary-soft:  var(--c-sage-soft);
+
+  --highlight:       var(--c-saffron);
+  --highlight-soft:  var(--c-saffron-soft);
+
+  --success:         #6BA17C;
+  --warning:         var(--c-saffron-deep);
+  --danger:          var(--c-coral-deep);
+
+  /* =========================================================
+     TYPE FAMILIES
+     ========================================================= */
+  --font-display: 'Noto Serif Display', 'Georgia', 'Times New Roman', serif;
+  --font-body:    'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono:    'Noto Sans Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* =========================================================
+     TYPE SCALE (raw)
+     ========================================================= */
+  --fs-xs:   12px;
+  --fs-sm:   14px;
+  --fs-base: 17px;
+  --fs-md:   18px;
+  --fs-lg:   20px;
+  --fs-xl:   24px;
+  --fs-2xl:  32px;
+  --fs-3xl:  44px;
+  --fs-4xl:  60px;
+  --fs-5xl:  84px;
+
+  --lh-tight:   1.10;
+  --lh-snug:    1.25;
+  --lh-normal:  1.50;
+  --lh-relaxed: 1.65;
+
+  --tracking-tight:  -0.02em;
+  --tracking-snug:   -0.01em;
+  --tracking-normal: 0;
+  --tracking-wide:   0.04em;
+
+  /* =========================================================
+     SPACING (4px base)
+     ========================================================= */
+  --sp-1:  4px;
+  --sp-2:  8px;
+  --sp-3:  12px;
+  --sp-4:  16px;
+  --sp-5:  24px;
+  --sp-6:  32px;
+  --sp-7:  48px;
+  --sp-8:  64px;
+  --sp-9:  96px;
+  --sp-10: 128px;
+
+  /* =========================================================
+     RADII
+     ========================================================= */
+  --radius-xs:   6px;
+  --radius-sm:   8px;
+  --radius-md:   14px;
+  --radius-lg:   20px;
+  --radius-xl:   28px;
+  --radius-pill: 9999px;
+
+  /* =========================================================
+     SHADOWS
+     ========================================================= */
+  --shadow-sm:    0 1px 2px rgba(34,32,30,0.06);
+  --shadow-card:  0 1px 2px rgba(34,32,30,0.06), 0 8px 24px rgba(34,32,30,0.06);
+  --shadow-hover: 0 2px 4px rgba(34,32,30,0.08), 0 16px 40px rgba(34,32,30,0.10);
+  --shadow-pop:   0 4px 8px rgba(34,32,30,0.06), 0 20px 50px rgba(34,32,30,0.14);
+  --shadow-coral: 0 4px 14px rgba(242,132,130,0.30);
+  --shadow-sage:  0 4px 14px rgba(132,165,157,0.30);
+
+  /* =========================================================
+     MOTION
+     ========================================================= */
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ease-in:  cubic-bezier(0.5, 0, 0.75, 0);
+  --dur-fast:   120ms;
+  --dur-base:   200ms;
+  --dur-slow:   320ms;
+  --dur-slower: 500ms;
+
+  /* =========================================================
+     LAYOUT
+     ========================================================= */
+  --content-max: 1120px;
+  --reading-max: 680px;
+  --header-h:    72px;
+  --gutter:      24px;
+}
+
+/* =====================================================================
+   SEMANTIC ELEMENT TOKENS
+   ===================================================================== */
+
+html, body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  line-height: var(--lh-relaxed);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings — display serif, tight tracking, snug leading */
+.h-display, h1.display {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--fs-5xl);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+  font-style: italic;
+}
+
+h1, .h1 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--fs-4xl);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+}
+
+h2, .h2 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--fs-3xl);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+}
+
+h3, .h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--fs-2xl);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tracking-snug);
+}
+
+h4, .h4 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--fs-xl);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tracking-snug);
+}
+
+h5, .h5 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--fs-lg);
+  line-height: var(--lh-snug);
+}
+
+h6, .eyebrow {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--fs-xs);
+  line-height: var(--lh-normal);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--fg-subtle);
+}
+
+p, .body {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  line-height: var(--lh-relaxed);
+  color: var(--fg);
+}
+
+.lead {
+  font-family: var(--font-body);
+  font-size: var(--fs-lg);
+  line-height: var(--lh-normal);
+  color: var(--fg-muted);
+}
+
+small, .caption {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-normal);
+  color: var(--fg-subtle);
+}
+
+code, .mono {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+}
+
+a, .link {
+  color: var(--fg);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  transition: color var(--dur-base) var(--ease-out);
+}
+a:hover, .link:hover { color: var(--accent); }
