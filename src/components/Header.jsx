@@ -1,4 +1,8 @@
+import React from 'react';
+
 export default function Header({ active, onNav }) {
+  const [menuOpen, setMenuOpen] = React.useState(false);
+
   const links = [
     {
       id: 'about',
@@ -14,23 +18,39 @@ export default function Header({ active, onNav }) {
     { id: 'contact', label: 'Contact me' },
   ];
 
+  const handleNav = (id) => {
+    setMenuOpen(false);
+    onNav(id);
+  };
+
   return (
     <header className="nk-header">
       <div className="nk-header-inner">
-        <a className="nk-brand" onClick={() => onNav('top')}>natcha</a>
-        <nav className="nk-nav">
+        <a className="nk-brand" onClick={() => handleNav('top')}>natcha</a>
+        <button
+          type="button"
+          className={`nk-nav-toggle ${menuOpen ? 'open' : ''}`}
+          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={menuOpen}
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav className={`nk-nav ${menuOpen ? 'open' : ''}`}>
           {links.map((l) => (
             <div key={l.id} className="nk-nav-item">
               <a
                 className={`nk-nav-link ${l.sub ? 'has-caret' : ''} ${active === l.id ? 'active' : ''}`}
-                onClick={() => onNav(l.id)}
+                onClick={() => handleNav(l.id)}
               >
                 {l.label}
               </a>
               {l.sub && (
                 <div className="nk-dropdown">
                   {l.sub.map((s) => (
-                    <a key={s.id} className="nk-dd-link" onClick={() => onNav(s.id)}>
+                    <a key={s.id} className="nk-dd-link" onClick={() => handleNav(s.id)}>
                       <span className="nk-dd-dot"></span>
                       {s.label}
                     </a>

@@ -48,6 +48,7 @@ html { scroll-behavior: smooth; }
   justify-content: center;
 }
 .nk-header-inner {
+  position: relative;
   width: 100%;
   max-width: 1180px;
   display: flex;
@@ -61,6 +62,32 @@ html { scroll-behavior: smooth; }
   border-radius: 9999px;
   box-shadow: 0 8px 24px rgba(34,32,30,0.06);
 }
+.nk-nav-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+  padding: 9px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  border-radius: 99px;
+  transition: background var(--dur-base) var(--ease-out);
+}
+.nk-nav-toggle:hover { background: rgba(34,32,30,0.06); }
+.nk-nav-toggle span {
+  display: block;
+  height: 2px;
+  width: 22px;
+  background: var(--fg);
+  border-radius: 2px;
+  transition: transform var(--dur-base) var(--ease-out), opacity var(--dur-base) var(--ease-out);
+}
+.nk-nav-toggle.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.nk-nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nk-nav-toggle.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 .nk-brand {
   font-family: var(--font-display);
   font-style: italic;
@@ -938,11 +965,36 @@ html { overflow-x: hidden; }
   .nk-footer { padding: 32px 24px; }
   .nk-footer-inner { flex-direction: column; gap: 12px; text-align: center; }
 
-  /* Header: let the nav scroll horizontally instead of overflowing */
-  .nk-header-inner { padding: 8px 12px 8px 18px; gap: 12px; }
-  .nk-nav { overflow-x: auto; scrollbar-width: none; flex-wrap: nowrap; }
-  .nk-nav::-webkit-scrollbar { display: none; }
-  .nk-nav-link { padding: 8px 12px; white-space: nowrap; }
+  .nk-header-inner { padding: 8px 12px 8px 20px; gap: 12px; }
+}
+
+/* Mobile: hamburger menu replaces inline nav */
+@media (max-width: 768px) {
+  .nk-nav-toggle { display: flex; }
+  .nk-nav {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0; right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
+    padding: 12px;
+    background: var(--c-paper);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(34,32,30,0.10);
+    display: none;
+  }
+  .nk-nav.open { display: flex; }
+  .nk-nav-item { width: 100%; }
+  .nk-nav-link {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-size: 15px;
+  }
   /* Hover dropdowns don't work on touch — hide them */
   .nk-nav-link.has-caret::after { display: none; }
   .nk-dropdown { display: none !important; }
