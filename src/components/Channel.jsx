@@ -44,10 +44,10 @@ export default function Channel() {
       blurb: 'Bite-sized project management tips, frameworks, and real-world lessons — across all major platforms.',
       accent: 'linear-gradient(135deg,#F6BD60,#84A59D)',
       links: [
-        { kind: 'TikTok',    icon: 'TikTok',    handle: '@pmbuddy',  href: 'https://vt.tiktok.com/ZSM4ySKfV/' },
-        { kind: 'Instagram', icon: 'Instagram', handle: '@pmbuddy',  href: 'https://www.instagram.com/reel/DG7bD6JSgA1/?igsh=eHZoazR0MDNxa3pw' },
-        { kind: 'YouTube',   icon: 'YouTube',   handle: '@pmbuddy',  href: 'https://youtube.com/shorts/e5Kqx6f1RYE?feature=share' },
-        { kind: 'Facebook',  icon: 'Facebook',  handle: 'PMBuddy',   href: 'https://www.facebook.com/share/r/1Xu3SeQjki/' },
+        { kind: 'TikTok',    icon: 'TikTok',    handle: '@projectmanagerbuddy', href: 'https://www.tiktok.com/@projectmanagerbuddy' },
+        { kind: 'Instagram', icon: 'Instagram', handle: '@pmbuddy.byprang',     href: 'https://www.instagram.com/pmbuddy.byprang' },
+        { kind: 'YouTube',   icon: 'YouTube',   handle: '@pmbuddyy',            href: 'https://www.youtube.com/@pmbuddyy' },
+        { kind: 'Facebook',  icon: 'Facebook',  handle: 'pmbuddyy',             href: 'https://www.facebook.com/pmbuddyy' },
       ],
     },
   ];
