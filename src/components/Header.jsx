@@ -11,15 +11,7 @@ export default function Header({ active, onNav }) {
     },
     { id: 'projects', label: 'Projects' },
     { id: 'channel', label: 'Channel / Blog' },
-    {
-      id: 'contact',
-      label: 'Contact me',
-      sub: [
-        { id: 'contact-line', label: 'LINE' },
-        { id: 'contact-email', label: 'Email' },
-        { id: 'contact-social', label: 'Social media' },
-      ],
-    },
+    { id: 'contact', label: 'Contact me' },
   ];
 
   return (
