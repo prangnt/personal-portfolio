@@ -48,7 +48,6 @@ export default function Header({ active, onNav }) {
             </div>
           ))}
         </nav>
-        <button className="nk-cta" onClick={() => onNav('contact')}>Say hello</button>
       </div>
     </header>
   );
